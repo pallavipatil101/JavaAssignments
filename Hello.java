@@ -1,19 +1,19 @@
 package assignments;
-
+//Q.3 Write a class with method talk which prints hello and then overload the talk method by taking in a name and printing “Hello” with that name.
 public class Hello {
 	
-	public void hello() {
+	public void talk() {
 		System.out.println("Hello");
 	}
 	
-	public void hello(String name) {
+	public void talk(String name) {
 		System.out.println("Hello "+name);
 	}
 
 	public static void main(String[] args) {
 		Hello h = new Hello();
-		h.hello();
-		h.hello("Pallavi");
+		h.talk();
+		h.talk("Pallavi");
 
 	}
 

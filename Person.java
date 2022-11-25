@@ -1,6 +1,7 @@
 package assignments;
 
 import java.util.Scanner;
+//Q.1 Write a class Person with private properties Name, Age and write the constructor to set these properties. Also write the setter and getter methods to set and get these properties.
 
 public class Person {
 	private String name;

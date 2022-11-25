@@ -1,10 +1,16 @@
 package assignments;
 
-public class StringPalindrome {
+import java.util.Scanner;
 
+public class StringPalindrome {
+	//Q.4 Write programs to accept any word and check whether the word is palindrome or not.
+	
 	public static void main(String[] args) {
-		String str = "Reviver";
 		String rev = "";
+		
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter a word: ");
+		String str = sc.nextLine();
 		
 		for(int i=str.length()-1; i>=0; i--)
 		{

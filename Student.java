@@ -1,4 +1,5 @@
 package assignments;
+//Q.2 Write class Teacher and Student which extends class Person. Add properties Roll no, course, department in student class along with the constructor and getter, setters. Add properties department, specialization in Teacher class along with constructor and getter, setters. The constructor should accept all the properties of the person as well as the current class i.e Student or Teacher and set the properties.
 
 public class Student extends Person {
 	int roll_no ;
