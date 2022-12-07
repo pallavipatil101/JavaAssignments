@@ -78,22 +78,13 @@ public class TestFour {
   @Test(priority = 4)
   public void scrollProducts() {
 	  List<WebElement> products = driver.findElements(By.xpath("//div[@id = 'srp-river-results']/ul/li"));
-	  /*Actions action = new Actions(driver);
-	  for(WebElement pro : products) {
-	  action.moveToElement(pro).build().perform();
-	  }*/
-	  
 	  Actions action = new Actions(driver);
 	  Iterator<WebElement> it = products.iterator();
 	  while(it.hasNext()) {
 		  WebElement pro = it.next();
 		  action.moveToElement(pro).build().perform();
 		  
-	  }
-	 
-	  
-	  
-	  
+	  }	  
   }
   
   @AfterClass
