@@ -22,10 +22,9 @@ public class TestOne {
   
   @Test
   public void testOne() {
-	  String acttitle = driver.getTitle();
-	  
-	  //Assert.assertEquals(acttitle, "QA Automation Tools Trainings and Tutorials | QA Tech Hub");
-	  
+  	//Test to print PASS if the title of the page matches with “QA Automation Tools Trainings and Tutorials | QA Tech Hub” else FAIL.
+	  	  String acttitle = driver.getTitle();
+	  //Assert.assertEquals(acttitle, "QA Automation Tools Trainings and Tutorials | QA Tech Hub");	  
 	  if(acttitle.equalsIgnoreCase("QA Automation Tools Trainings and Tutorials | QA Tech Hub")){
 		  System.out.println("PASS");
 	  }
@@ -34,9 +33,9 @@ public class TestOne {
 	  }
   }
   
-
   @AfterTest
   public void afterTest() {
+  	//Navigate to the Facebook page (https://www.facebook.com). Navigate back to the QA Tech Hub. Print current URL.
 	  driver.navigate().to("https://www.facebook.com");
 	  System.out.println("Navigated to facebook");
 	  driver.navigate().back();
