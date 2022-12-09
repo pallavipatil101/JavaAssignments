@@ -39,11 +39,11 @@ public class TestFour {
 	  }
 	  driver.manage().window().maximize();
 	  driver.get("https://www.ebay.com");
-
   }
   
   @Test(priority = 0)
   public void search() {
+  	//Search for a product. select catagory from drop-down list.
 	  driver.findElement(By.id("gh-ac")).sendKeys("Apple watches");
 	  WebElement drop = driver.findElement(By.id("gh-cat"));
 	  Select select = new Select(drop);
@@ -53,6 +53,7 @@ public class TestFour {
 
   @Test(priority = 1)
   public void result() {
+  	//Test to print the result of search.
 	  String result = driver.findElement(By.xpath("//h1[contains(text(),'results for ')]")).getText();
 	  System.out.println("Results are: "+result);
 	  System.out.println("---------------------------------------------------------");
@@ -60,6 +61,7 @@ public class TestFour {
   
   @Test(priority = 2)
   public void nthProduct() {
+  	//Test to print nth product. In this case, 10th product.
 	 String nthProduct = driver.findElement(By.xpath("//div[@id = 'srp-river-results']/ul/li[11]")).getText();
 	 System.out.println("nth product is: "+nthProduct);
 	 System.out.println("---------------------------------------------------------");
@@ -67,6 +69,7 @@ public class TestFour {
   
   @Test(priority = 3)
   public void allProducts() {
+  	//Test to print all products on the page.
 	  List<WebElement> products = driver.findElements(By.xpath("//div[@id = 'srp-river-results']/ul/li/following-sibling::li"));
 	  
 	  for(WebElement pro : products) {
@@ -77,13 +80,13 @@ public class TestFour {
   
   @Test(priority = 4)
   public void scrollProducts() {
+  	//Test to scroll down on the products.
 	  List<WebElement> products = driver.findElements(By.xpath("//div[@id = 'srp-river-results']/ul/li"));
 	  Actions action = new Actions(driver);
 	  Iterator<WebElement> it = products.iterator();
 	  while(it.hasNext()) {
 		  WebElement pro = it.next();
-		  action.moveToElement(pro).build().perform();
-		  
+		  action.moveToElement(pro).build().perform();		  
 	  }	  
   }
   
