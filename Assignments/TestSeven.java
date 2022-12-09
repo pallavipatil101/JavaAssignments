@@ -20,17 +20,21 @@ public class TestSeven {
 	
 	@Test
 	public void dragDrop(){
+		//Test for drag and drop operation.
+		//Verify operation is successful by comparing the css property and text of elements.
 		WebElement frame = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
 		driver.switchTo().frame(frame);
 		WebElement source = driver.findElement(By.id("draggable"));
 		WebElement target = driver.findElement(By.id("droppable"));
 		
+		//css propertiy/text before drag and drop.
 		String colorBeforeDrop = target.getCssValue("color");
 		String textBeforeDrop = target.getText();
 		
 		Actions action = new Actions(driver);
 		action.dragAndDrop(source, target).build().perform();;	
 		
+		//css property/text after drag and drop
 		String colorAfterDrop = target.getCssValue("color");
 		String textAfterDrop = target.getText();
 		
