@@ -3,7 +3,7 @@ package assignments;
 public class Hello {
 	
 	public void talk() {
-		System.out.println("Hello");
+		System.out.println("Hello!!");
 	}
 	
 	public void talk(String name) {
